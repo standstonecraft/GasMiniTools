@@ -1,0 +1,7 @@
+{
+  "//": "このファイル：このワークスペース内の全ての.jsが同一プロジェクトであるとVSCodeに教えることでファイルを閉じていてもインテリセンスで参照できるようになる",
+  "compilerOptions": {
+    "target": "ES6"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

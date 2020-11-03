@@ -1,0 +1,47 @@
+{
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Tasks",
+        "serviceId": "tasks",
+        "version": "v1"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://mail.google.com/",
+    "https://www.googleapis.com/auth/gmail.readonly",
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.metadata",
+    "https://www.googleapis.com/auth/gmail.addons.current.action.compose",
+    "https://www.googleapis.com/auth/tasks"
+  ],
+  "runtimeVersion": "V8",
+  "timeZone": "Asia/Tokyo",
+  "addOns": {
+    "common": {
+      "name": "GmailMiniTools",
+      "logoUrl": "https://www.gravatar.com/avatar/00000000000000000000000000000001?d=retro",
+      "layoutProperties": {
+        "primaryColor": "#4285F4",
+        "secondaryColor": "#4285F4"
+      },
+      "homepageTrigger": {}
+    },
+    "gmail": {
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "onGmailMessageOpen"
+        }
+      ],
+      "homepageTrigger": {
+        "runFunction": "onNontextualOpen"
+      },
+      "openLinkUrlPrefixes": [
+        "https://mail.google.com/"
+      ]
+    }
+  }
+}
